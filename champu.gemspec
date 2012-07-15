@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.description = s.summary
   s.author = "Ranjib  Dey"
   s.email = "dey.ranjib@gmail.com"
-  s.homepage = "http://ranjib.posterous.com"
+  s.homepage = "https://github.com/ranjibd/champu"
   s.require_path = 'lib'
   s.files = %w(LICENSE README.rdoc Rakefile ) + Dir.glob("{lib,spec}/**/*")
 end
