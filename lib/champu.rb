@@ -1,6 +1,4 @@
 require 'chef'
-require 'mixlib/cli'
-require 'mixlib/log'
 require 'champu/version'
 require 'champu/config'
 require 'champu/step'
