@@ -28,6 +28,7 @@ Champu is a simple workflow/orchestration engine for chef-managed infrastructure
 Champu uses Chef libraries to query server information and execute command via ssh into them.
 Its dumb minimalist library aimed to facilitate readable infrastructure/deployment work flows.
 Following dsl in champu:
+
 ```ruby
   step "step title" do |st|
     st.search "name:app-server-*"
@@ -35,6 +36,7 @@ Following dsl in champu:
   end
 ```
 Is equivalent to:
+
 ```
   knife ssh "name:app-server-" "service httpd restart" 
 ```
