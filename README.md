@@ -38,5 +38,5 @@ Following dsl in champu:
 Is equivalent to:
 
 ```
-  knife ssh "name:app-server-" "service httpd restart" 
+  knife ssh "name:app-server-*" "service httpd restart" 
 ```
