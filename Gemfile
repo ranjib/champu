@@ -5,4 +5,5 @@ group :test do
   gem "chef"
   gem "mixlib-config"
   gem "rspec"
+  gem "rake"
 end
