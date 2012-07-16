@@ -41,11 +41,15 @@ class Champu
       @nodes=Chef::Search::Query.new.search(:node,term).first
     end
 
+    def knife_ssh
+     @knife_ssh ||= Chef::Knife::Ssh.new
+    end
+
     def execute(command)
       Chef::Config[:knife][:ssh_attribute] = config_value :ssh_attribute
       Chef::Config[:knife][:ssh_user]= config_value :ssh_user
       ui.msg(ui.color("Executing command:",:magenta) + ui.color(command,:yellow))
-      c=Chef::Knife::Ssh.new
+      c=knife_ssh
       c.configure_attribute
       c.configure_user
       c.configure_identity_file
@@ -53,7 +57,9 @@ class Champu
       c.action_nodes(nodes)
 
       longest=0
-      nodes.collect{|n|c.format_for_display(n)[c.config[:attribute]]}.each do |item|
+      nodes.each do  |n|
+        p_node= c.format_for_display(n)
+        item=p_node[c.config[:attribute]]
         hostspec = "#{config_value(:ssh_user)}@#{item}"
         session_opts = {}
         session_opts[:keys] = config_value :identity_file
