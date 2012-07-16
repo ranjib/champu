@@ -16,7 +16,7 @@ class Champu
     @config ||= Champu::Config
   end
   def step(title)
-    temp_step= Champu::Step.new(config,title)
+    temp_step= Champu::Step.new(title)
     yield(temp_step)
     temp_step
   end

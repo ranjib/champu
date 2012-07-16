@@ -35,12 +35,18 @@ describe Champu do
     end
     it "should allow user to execute a command for a step" do
       q=double('query')
-      q.stub(:search).with(:node,"some criteria").and_return([Array.new])
+      q.stub(:search).with(:node,"some criteria").and_return([Chef::Node.new])
       Chef::Search::Query.stub(:new).with(no_args()).and_return(q)
       Chef::Knife::Ssh.stub(:ssh_command).with("some command")
-      step=Champu::Step.new(nil,"title")
+      step=Champu::Step.new("title")
       step.search("some criteria")
       step.execute("some command")
+    end
+    it "should allow user to specify step specific ssh config" do
+      opts={:user=>'user',:identity_file=>'xx.pem'}
+      step=Champu::Step.new("title") 
+      step.config(opts)
+      step.config.should  == opts
     end
     it "should allow user to set the type of the step" do
       pending
