@@ -6,4 +6,5 @@ group :test do
   gem "mixlib-config"
   gem "rspec"
   gem "rake"
+  gem "simplecov", :require => false 
 end
