@@ -1,5 +1,7 @@
-== Champu
+## Champu
 Champu is a simple workflow/orchestration engine for chef-managed infrastructure
+
+```ruby
 
     require 'champu'
 
@@ -21,17 +23,18 @@ Champu is a simple workflow/orchestration engine for chef-managed infrastructure
       st.search("recipe:mysql")
       st.execute("sudo lvcreate -L10G -s -n dbsnapshot /dev/sda/mysql")
     end
+```ruby    
 
 Champu uses Chef libraries to query server information and execute command via ssh into them.
 Its dumb minimalist library aimed to facilitate readable infrastructure/deployment work flows.
 Following dsl in champu:
-  
+```ruby
   step "step title" do |st|
     st.search "name:app-server-*"
     st.execute "service httpd restart"
   end
-
+```
 Is equivalent to:
-  
+```
   knife ssh "name:app-server-" "service httpd restart" 
-
+```
