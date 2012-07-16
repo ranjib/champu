@@ -43,3 +43,14 @@ Is equivalent to:
 # License
 Apache - see the accompanying [LICENSE](https://raw.github.com/ranjibd/champu/master/LICENSE) file for details.
 
+# Install
+
+```
+gem install champu
+```
+
+# Continuous Integration
+[Champu on Travis CI](http://travis-ci.org/ranjibd/champu)
+
+![Built on Travis](https://secure.travis-ci.org/ranjibd/champu.png?branch=master)
+
