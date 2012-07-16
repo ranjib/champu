@@ -40,3 +40,6 @@ Is equivalent to:
 ```
   knife ssh "name:app-server-*" "service httpd restart" 
 ```
+# License
+Apache - see the accompanying [LICENSE](https://raw.github.com/ranjibd/champu/master/LICENSE) file for details.
+
