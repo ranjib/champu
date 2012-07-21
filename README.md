@@ -51,6 +51,8 @@ gem install champu
 
 # Continuous Integration
 [Champu on Travis CI](http://travis-ci.org/ranjibd/champu)
-
 ![Built on Travis](https://secure.travis-ci.org/ranjibd/champu.png?branch=master)
+
+# Code Metrics
+[![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/ranjibd/champu)
 
