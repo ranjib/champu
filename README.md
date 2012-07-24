@@ -1,6 +1,11 @@
 ## Champu
 Champu is a simple workflow/orchestration engine for chef-managed infrastructure
 
+# Continuous Integration
+[Champu on Travis CI] (http://travis-ci.org/ranjibd/champu)
+![Built on Travis](https://secure.travis-ci.org/ranjibd/champu.png?branch=master)
+[![Dependency Status](https://gemnasium.com/ranjibd/champu.png)](https://gemnasium.com/ranjibd/champu)
+
 ```ruby
 
     require 'champu'
@@ -48,10 +53,6 @@ Apache - see the accompanying [LICENSE](https://raw.github.com/ranjibd/champu/ma
 ```
 gem install champu
 ```
-
-# Continuous Integration
-[Champu on Travis CI](http://travis-ci.org/ranjibd/champu)
-![Built on Travis](https://secure.travis-ci.org/ranjibd/champu.png?branch=master)
 
 # Code Metrics
 [![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/ranjibd/champu)
